@@ -7,13 +7,13 @@ public class JavaCalculator {
         JFrame f = new JFrame();
         final JLabel label = new JLabel();
         label.setBounds(80, 225, 200, 50);
-        JLabel l1 = new JLabel("Число 1");
+        JLabel l1 = new JLabel("Число 1:");
         l1.setBounds(20, 20, 80, 30);
-        JLabel l2 = new JLabel("Число 2");
+        JLabel l2 = new JLabel("Число 2:");
         l2.setBounds(20, 75, 80, 30);
-        JLabel l3 = new JLabel("Операция");
+        JLabel l3 = new JLabel("Операция:");
         l3.setBounds(20, 125, 80, 30);
-        JLabel l4 = new JLabel("Результат");
+        JLabel l4 = new JLabel("Результат:");
         l4.setBounds(20, 225, 80, 30);
         JButton b1 = new JButton("Посчитать");
         b1.setBounds(50, 175, 225, 30);
@@ -35,7 +35,7 @@ public class JavaCalculator {
         f.add(tf2);
         f.add(tf3);
         f.add(tf4);
-        f.setSize(350, 450);
+        f.setSize(350, 350);
         f.setLayout(null);
         f.setVisible(true);
         b1.addActionListener(e -> {
