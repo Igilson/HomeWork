@@ -43,26 +43,26 @@ INSERT INTO person(id, firstname, lastname, age, id_street) VALUES
 
 
 
-1)  SELECT COUNT(*) 
+1)  	SELECT COUNT(*) 
 		FROM person
 
-2)  SELECT AVG(age) 
+2)  	SELECT AVG(age) 
 		FROM person
 
-3)  SELECT DISTINCT(lastname) 
+3)  	SELECT DISTINCT(lastname) 
 		FROM person ORDER BY lastname
 
-4)  SELECT(lastname),
-(SELECT count(lastname))FROM person WHERE lastname=lastname GROUP BY lastname
+4)  	SELECT(lastname),
+		(SELECT count(lastname))FROM person WHERE lastname=lastname GROUP BY lastname
 
-5)  SELECT(lastname) 
+5)	SELECT(lastname) 
 		FROM person WHERE lastname LIKE '%b%'
 
-6)  SELECT(lastname) 
+6)  	SELECT(lastname) 
 		FROM person WHERE id_street IS NULL
 
-7)  SELECT person.id as person_id, person.firstname as firstname, person.lastname as lastname, person.age as age, person.id_street as id_street, 
-    street.id as street_id, street.name as street_name
+7)  	SELECT person.id as person_id, person.firstname as firstname, person.lastname as lastname, person.age as age, person.id_street as id_street, 
+    		street.id as street_id, street.name as street_name
 		FROM person 
 		LEFT JOIN street ON street.id=person.id_street
 		WHERE person.age<18 AND street.name = 'prospektpravdy'
